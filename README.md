@@ -35,6 +35,20 @@ serial1.yieldOnMsrRead = "TRUE"
 serial1.startConnected = "TRUE"
 serial1.fileName = "/tmp/.vmware.com2"
 ```
+## VMware Fusion Configuration (network port)
+
+One can also ask VMware Fusion to run a virtual telnet server on a
+specified port (just like an "old-school" terminal server).
+Assuming we'll run telnet like this: telnet 10.1.2.3 5432
+the snipped of the vmx file would be:
+
+```
+serial0.fileType = "network"
+serial0.fileName = "telnet://10.1.2.3:5432"
+serial0.present = "TRUE"
+serial0.startConnected = "TRUE"
+serial0.yieldOnMsrRead = "TRUE"
+```
 
 ## Running the Software
 
